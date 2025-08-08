@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Django
+staticfiles/
+mediafiles/
+logs/
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+junit.xml
+
+# Linters / type checkers / tooling caches
+.mypy_cache/
+.ruff_cache/
+.tox/
+.pyre/
+
+# Editors / IDE
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environments / secrets (examples can remain)
+.env
+*.env
+environments/*.local.env
+.env.*.local
+
+# Build artifacts / distributions
+build/
+dist/
+wheels/
+*.egg-info/
+*.egg
+
+# Node (if ever used)
+node_modules/
+
+# MkDocs site output (if used)
+site/
