@@ -1,0 +1,17 @@
+# Django core
+Django>=4.2,<5.0
+
+# Environment variables
+django-environ
+
+# PostgreSQL support (optional, can be commented if using SQLite in dev)
+psycopg[binary]
+
+# JWT Authentication (if you're using DRF + JWT)
+djangorestframework-simplejwt
+
+# Optional: if you use DRF
+djangorestframework
+
+# Optional: if you want Django extensions (shell_plus, etc.)
+django-extensions

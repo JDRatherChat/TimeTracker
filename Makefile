@@ -1,4 +1,3 @@
-# Use bash on Unix, cmd-compatible on Windows
 SHELL := /bin/bash
 
 # === Common Python/Django Commands ===
@@ -48,3 +47,14 @@ clean-pyc:
 clean-migrations:
 	@echo "Removing old migration files..."
 	find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+
+# === Environment & Secrets ===
+
+secret:
+	@echo "Generating new Django SECRET_KEY..."
+	@SECRET=$$(python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())") && \
+	echo "SECRET_KEY=$$SECRET" >> environments/dev.env && \
+	echo "SECRET_KEY=$$SECRET" >> environments/prod.env && \
+	echo "✓ SECRET_KEY added to environments/.dev and .prod"
+
+
